@@ -12,7 +12,7 @@ def score(df, promo_pred_col = 'Promotion'):
     
 
 def test_results(promotion_strategy):
-    test_data = pd.read_csv('Test.csv')
+    test_data = pd.read_csv('./data/Test.csv')
     df = test_data[['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7']]
     promos = promotion_strategy(df)
     score_df = test_data.iloc[np.where(promos == 'Yes')]    
