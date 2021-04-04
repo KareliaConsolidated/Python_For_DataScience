@@ -7,10 +7,8 @@ import sklearn.datasets
 def sigmoid(x):
     """
     Compute the sigmoid of x
-
     Arguments:
     x -- A scalar or numpy array of any size.
-
     Return:
     s -- sigmoid(x)
     """
@@ -20,10 +18,8 @@ def sigmoid(x):
 def relu(x):
     """
     Compute the relu of x
-
     Arguments:
     x -- A scalar or numpy array of any size.
-
     Return:
     s -- relu(x)
     """
@@ -214,7 +210,7 @@ def plot_decision_boundary(model, X, y):
     plt.contourf(xx, yy, Z, cmap=plt.cm.Spectral)
     plt.ylabel('x2')
     plt.xlabel('x1')
-    plt.scatter(X[0, :], X[1, :], c=y, cmap=plt.cm.Spectral)
+    plt.scatter(X[0, :], X[1, :], c=y.ravel(), cmap=plt.cm.Spectral)
     plt.show()
     
 def predict_dec(parameters, X):
